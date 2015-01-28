@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tense: MyText
+  form_local: MyText
+  form_native: MyText
+  form_value: MyText
+  audio_url: MyText
+  audio_length: MyText
+
+two:
+  tense: MyText
+  form_local: MyText
+  form_native: MyText
+  form_value: MyText
+  audio_url: MyText
+  audio_length: MyText

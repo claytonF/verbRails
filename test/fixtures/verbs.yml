@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_local: MyText
+  name_native: MyText
+
+two:
+  name_local: MyText
+  name_native: MyText
