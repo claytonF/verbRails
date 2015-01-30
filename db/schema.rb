@@ -11,21 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128203552) do
+ActiveRecord::Schema.define(version: 20150130231555) do
 
   create_table "conjugations", force: true do |t|
-    t.text     "tense"
-    t.text     "form_local"
-    t.text     "form_native"
     t.text     "form_value"
     t.text     "audio_url"
     t.text     "audio_length"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "verb_id"
+    t.integer  "tense_id"
+    t.integer  "form_id"
   end
 
-  add_index "conjugations", ["user_id"], name: "index_conjugations_on_user_id"
+  create_table "forms", force: true do |t|
+    t.text "form_local"
+    t.text "form_native"
+  end
+
+  create_table "tenses", force: true do |t|
+    t.text "tense_abbrev"
+    t.text "tense_name_local"
+    t.text "tense_name_native"
+  end
+
+  create_table "tenses_verbs", id: false, force: true do |t|
+    t.integer "verb_id",  null: false
+    t.integer "tense_id", null: false
+  end
 
   create_table "verbs", force: true do |t|
     t.text     "name_local"
